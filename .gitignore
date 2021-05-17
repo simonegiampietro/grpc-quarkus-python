@@ -2,3 +2,5 @@
 */**/.idea
 */**/.gradle
 */**/__pycache__
+
+python/grpc_resources/

@@ -22,7 +22,7 @@ class DirInitializer:
         for file in dir_content:
             if os.path.isfile(os.path.join(self.package_name, file)) and file.endswith('grpc.py'):
                 replacing_files.append(file)
-        print('replacing_files', replacing_files)
+        print('Affected modules', replacing_files)
         for filename in replacing_files:
             grpc_index = filename.index('_grpc')
             module_name = filename[0: grpc_index]
@@ -56,6 +56,10 @@ class DirInitializer:
             file.close()
 
 
-if __name__ == '__main__':
+def main():
     operator = DirInitializer()
     operator.execute()
+
+
+if __name__ == '__main__':
+    main()
