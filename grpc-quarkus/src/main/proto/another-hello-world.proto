@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "it.simonegiampietro.another";
+option java_outer_classname = "AnotherHelloWorldProto";
+
+message AnotherRequest {
+	string values = 1;
+}
+
+message AnotherResponse {
+	string message = 1;
+}
+
+service AnotherHelloWorldService {
+	rpc AnotherMessage(AnotherRequest) returns (AnotherResponse) {}
+}
