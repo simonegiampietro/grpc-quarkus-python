@@ -5,7 +5,6 @@ import grpc_tools.protoc as protoc
 
 class DirInitializer:
     def __init__(self):
-        # todo: take this from config
         self.package_name = 'grpc_resources'
         self.proto_path = '../grpc-quarkus/src/main/proto'
         if not self.proto_path.endswith('/'):
